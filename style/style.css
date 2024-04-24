@@ -5,27 +5,79 @@
 }
 
 body{
-    height: 100vh;
+    height: 125vh;
     position: relative;
 }
 
 header{
-    position: absolute;
+    position: fixed;
     background-color: black;
     color: gray;
-    height: 92vh;
-    width: 7%;
+    height: 99vh;
+    width: 130px;
+    padding: 1rem 4.5rem 1rem 1rem;
+    z-index:1;
+}
+
+header ul > li{
+    list-style: none;
+}
+
+main{
+    width: calc(100% - 130px);
+    height: calc(100% - 8vh);
+    position: absolute;
+    right: 0;
+    top: 8vh;
+    background-color: #141922;
+}
+
+main ul > li{
+    list-style-type: none;
+    padding: 1rem;
+}
+
+main nav{
+    color: gray;
+    display: flex;
+    justify-content: center;
+}
+
+main nav ul{
+    display: flex;
+    flex-direction: row;
+
+}
+
+main div.recentlyPlayed{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+main div.playedImg{
+    
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main div.playedImg img{
+    width: 150px;
 }
 
 section.upgrade{
     background-color: #080B12;
     height: 8vh;
-    width: 93%;
+    width: 100%;
     position: fixed;
     right:0;
     display:flex;
     align-items: center;
     justify-content: flex-end;
+    z-index:0;
 }
 
 footer{
@@ -34,6 +86,43 @@ footer{
     display: flex;
     justify-content: space-between;
     background-color: #282828;
-    position: absolute;
+    position: fixed;
     bottom: 0;
+    z-index:1;
+}
+
+footer div.footerElement{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+/**********************************************************\
+/*
+                        MEDIA QUERIES
+                                                          */
+
+@media screen and (max-width:1200px) {
+    body{
+        background-color: black;
+    }
+}
+
+@media screen and (max-width:992px) {
+    body{
+        background-color: red;
+    }
+}
+
+@media screen and (max-width:768px) {
+    body{
+        background-color: black;
+    }
+}
+
+@media screen and (max-width:576px) {
+    body{
+        background-color: black;
+    }
 }
