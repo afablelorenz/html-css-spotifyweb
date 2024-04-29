@@ -14,18 +14,69 @@ header{
     background-color: black;
     color: gray;
     height: 99vh;
-    width: 130px;
-    padding: 1rem 4.5rem 1rem 1rem;
+    padding: 1rem 3.5rem 1rem 1rem;
     z-index:1;
+}
+
+header img{
+    height: 35px;
+    margin-bottom: 1rem;
 }
 
 header ul > li{
     list-style: none;
+    padding: 0.3rem 0;
 }
 
+header nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+header.headerFlex > div{
+    margin-top: 20rem;
+}
+
+header nav li.creaPlaylist{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav li.creaPlaylist span{
+    font-size: xx-large;
+}
+
+header div.profile{
+    display: flex;
+    flex-direction: column;
+}
+
+header div.profileJohn{
+    display: flex;
+    align-items: center;
+
+}
+
+header div.profileJohn  p{
+    padding-left: 0.5rem;
+    font-weight: 900;
+    color: white;
+}
+
+header div.profileJohn img{
+
+    width:1.5rem;
+    background-color: gray;
+    border-radius: 50%;
+}
+
+
 main{
-    width: calc(100% - 130px);
-    height: calc(100% - 8vh);
+    width: calc(100% - 189px);
     position: absolute;
     right: 0;
     top: 8vh;
@@ -68,6 +119,24 @@ main div.playedImg img{
     width: 150px;
 }
 
+main div.playedImg p.padtop{
+    padding-top: 1rem;
+}
+main h2{
+    color: white;
+    padding: 1rem 1rem 0.2rem 1.7rem;
+}
+
+main div.johnDoe > p{
+    color: gray;
+    padding: 0.2rem 1rem 0.2rem 1.7rem;
+}
+
+main div.artisti > p{
+    color: gray;
+    padding: 0.2rem 1rem 0.2rem 1.7rem;
+}
+
 section.upgrade{
     background-color: #080B12;
     height: 8vh;
@@ -77,7 +146,25 @@ section.upgrade{
     display:flex;
     align-items: center;
     justify-content: flex-end;
+    padding-right: 1.5rem;
     z-index:0;
+}
+
+.tWhite{
+    color: white;
+}
+
+.tGray{
+    color: gray;
+}
+
+section.upgrade button{
+    background-color: #080B12;
+    border-radius: 35%;
+    border-color: white;
+    color: whitesmoke;
+    padding: 1rem;
+
 }
 
 footer{
@@ -89,12 +176,39 @@ footer{
     position: fixed;
     bottom: 0;
     z-index:1;
+    color: white;
 }
 
 footer div.footerElement{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+}
+
+footer div.footerElement img{
+    width: 5rem;
+    padding: 1.5rem 1rem;
+}
+
+footer div.footerElement div{
+    padding-right: 1rem;
+}
+
+footer div.footerElement span{
+    padding-right: 0.5rem;
+}
+
+footer div.footerElementPlay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer div.footerElementBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 
@@ -105,24 +219,81 @@ footer div.footerElement{
 
 @media screen and (max-width:1200px) {
     body{
-        background-color: black;
+        height: 150vh;
+        position: relative;
+    }
+
+    main nav ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    main div.recentlyPlayed{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 1rem;
     }
 }
 
 @media screen and (max-width:992px) {
     body{
-        background-color: red;
+        height: 150vh;
+        position: relative;
     }
+
+    main nav ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    main div.recentlyPlayed{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 1rem;
+    }
+
 }
 
 @media screen and (max-width:768px) {
     body{
-        background-color: black;
+        height: 180vh;
+        position: relative;
     }
-}
+
+    main nav ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    main div.recentlyPlayed{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 1rem;
+    }
 
 @media screen and (max-width:576px) {
     body{
-        background-color: black;
+        height: 310vh;
+        position: relative;
     }
+
+    main nav ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    main div.recentlyPlayed{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 1rem;
+    }
+}
 }
